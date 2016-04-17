@@ -5,11 +5,18 @@ import ru.l8s.LSFightGame.authentication.api.IUser;
 
 @Component
 public class User implements IUser{
+    public User(String name, String password) {
+        this.name = name;
+        this.password = password;
+    }
+
+    public User() {
+    }
 
     private String name;
     private String password;
 
-    public String getName() {
+    public String getLogin() {
         return name;
     }
 

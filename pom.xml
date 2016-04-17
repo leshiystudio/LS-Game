@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <java-version>1.8</java-version>
         <spring-framework-version>4.1.5.RELEASE</spring-framework-version>
     </properties>
 
@@ -39,7 +40,6 @@
             <version>2.2.10</version>
         </dependency>
 
+
     </dependencies>
-
-
 </project>
