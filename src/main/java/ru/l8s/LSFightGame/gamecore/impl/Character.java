@@ -12,4 +12,3 @@ public class Character implements ICharacter{
     }
 }
 
-

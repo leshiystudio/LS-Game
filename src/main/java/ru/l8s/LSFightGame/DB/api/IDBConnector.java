@@ -7,3 +7,4 @@ public interface IDBConnector {
     void connect();
 
 }
+

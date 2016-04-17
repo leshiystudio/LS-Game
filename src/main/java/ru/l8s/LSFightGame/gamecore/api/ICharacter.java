@@ -8,3 +8,4 @@ public interface ICharacter {
     int armor=100;
     boolean fightTo(ICharacter enemy);
 }
+
