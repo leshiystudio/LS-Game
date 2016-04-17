@@ -14,17 +14,6 @@ public class MainController {
     /*Попадаем сюда на старте приложения (см. параметры аннотации и настройки пути после деплоя) */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView main() {
-        MyInterface inter = new MyInterface() {
-            @Override
-            public void get() {
-
-            }
-
-            @Override
-            public void m() {
-
-            }
-        };
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("userJSP", new User());
         modelAndView.setViewName("index");
@@ -49,8 +38,4 @@ public class MainController {
     }
 }
 
-interface MyInterface{
-    void get();
-    void m();
-}
 
