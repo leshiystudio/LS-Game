@@ -1,9 +1,10 @@
-package ru.l8s.LSFightGame.model;
+package ru.l8s.LSFightGame.authentication.impl;
 
 import org.springframework.stereotype.Component;
+import ru.l8s.LSFightGame.authentication.api.IUser;
 
 @Component
-public class User {
+public class User implements IUser{
 
     private String name;
     private String password;
