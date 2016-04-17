@@ -11,7 +11,7 @@
     <title>Second Page</title>
 </head>
 <body>
-Введенное имя: ${userJSP.name};
+Введенное имя: ${userJSP.username};
 <br/>
 Введенный пароль: ${userJSP.password};
 <br/>

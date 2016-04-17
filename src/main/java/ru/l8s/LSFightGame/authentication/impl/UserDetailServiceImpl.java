@@ -16,7 +16,7 @@ import java.util.Set;
  * Created by LS on 17.04.2016.
  */
 @Service
-public class UserDetailServiceImpl implements UserDetailsService {
+class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserService userService;
 
@@ -28,7 +28,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
         UserDetails userDetails =
                 new org.springframework.security.core.userdetails.User(
-                        user.getLogin(),
+                        user.getUsername(),
                         user.getPassword(),
                         roles);
         return userDetails;
