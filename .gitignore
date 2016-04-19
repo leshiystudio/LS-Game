@@ -3,7 +3,7 @@
 #################
 
 lib/
-.idea
+.idea/
 out/
 target/
 *.impl
@@ -224,3 +224,4 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
