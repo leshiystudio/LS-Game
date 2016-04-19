@@ -2,10 +2,10 @@
 ## IDEA
 #################
 
-lib/
-.idea/
-out/
-target/
+lib
+.idea
+out
+target
 *.impl
 
 #################
