@@ -1,4 +1,4 @@
-package ru.l8s.LSFightGame.authentication.impl;
+/*package ru.l8s.LSFightGame.authentication.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +22,7 @@ import javax.servlet.ServletRegistration.Dynamic;
 /**
  * Created by LS on 18.04.2016.
  */
-
+/*
 
 @Configuration
 @EnableWebSecurity
@@ -110,3 +110,5 @@ class Initializer implements WebApplicationInitializer {
         servlet.setLoadOnStartup(1);
     }
 }
+
+*/

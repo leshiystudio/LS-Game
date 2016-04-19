@@ -13,7 +13,7 @@
         <spring-framework-version>4.1.5.RELEASE</spring-framework-version>
         <javax.servlet>3.0.1</javax.servlet>
         <jstl.version>1.2</jstl.version>
-        <spring.securiry>3.2.0.RELEASE</spring.securiry>
+        <spring.securiry>4.0.4.RELEASE</spring.securiry>
     </properties>
 
     <dependencies>
@@ -72,6 +72,10 @@
             <artifactId>spring-security-taglibs</artifactId>
             <version>${spring.securiry}</version>
         </dependency>
-
-    </dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>3.0.3.RELEASE</version>
+        </dependency>
+     </dependencies>
 </project>

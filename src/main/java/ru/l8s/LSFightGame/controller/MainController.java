@@ -1,5 +1,6 @@
 package ru.l8s.LSFightGame.controller;
 
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +37,39 @@ public class MainController {
 
         return modelAndView; //после уйдем на представление, указанное чуть выше, если оно будет найдено.
     }
+
+    @RequestMapping(value = "/profile")
+    public ModelAndView profile() {
+        ModelAndView modelAndView = new ModelAndView();
+
+        //имя представления, куда нужно будет перейти
+        modelAndView.setViewName("profile/index");
+
+        return modelAndView; //после уйдем на представление, указанное чуть выше, если оно будет найдено.
+    }
+
+    @RequestMapping(value = "/login")
+    public ModelAndView login() {
+        ModelAndView modelAndView = new ModelAndView();
+
+        //имя представления, куда нужно будет перейти
+        modelAndView.setViewName("login");
+
+        return modelAndView; //после уйдем на представление, указанное чуть выше, если оно будет найдено.
+    }
+
+    @RequestMapping(value = "/error403")
+    public ModelAndView error403() {
+        ModelAndView modelAndView = new ModelAndView();
+
+        //имя представления, куда нужно будет перейти
+        modelAndView.setViewName("error403");
+
+        return modelAndView; //после уйдем на представление, указанное чуть выше, если оно будет найдено.
+    }
 }
+
+
 
 
 

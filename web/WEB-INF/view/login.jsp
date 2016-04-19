@@ -20,7 +20,12 @@
         <p class="lead">
         </p>
         <sec:authorize access="!isAuthenticated()">
-            <p><a class="btn btn-lg btn-success" href="login" role="button">Войти</a></p>
+            <form action="/j_spring_security_check" method="post">
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <input type="text" class="form-control" name="j_username" placeholder="username" required autofocus value="username">
+                <input type="password" class="form-control" name="j_password" placeholder="Password" required value="1234">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+            </form>
         </sec:authorize>
         <sec:authorize access="isAuthenticated()">
             <p>Ваш логин: <sec:authentication property="principal.username" /></p>

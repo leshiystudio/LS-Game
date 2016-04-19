@@ -8,7 +8,8 @@ import ru.l8s.LSFightGame.authentication.api.IUser;
 import java.util.Collection;
 
 @Component
-public class User implements UserDetails{
+public class User implements UserDetails  {
+    private int id;
     private String username;
     private String password;
 
@@ -19,6 +20,14 @@ public class User implements UserDetails{
     }
 
     public User() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setUsername(String name) {
