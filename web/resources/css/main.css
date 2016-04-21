@@ -1,0 +1,9 @@
+.header, .marketing, .footer {
+    padding-left: 0;
+    padding-right: 0;
+}
+.footer {
+    border-top: 1px solid #e5e5e5;
+    color: #777777;
+    padding-top: 19px;
+}

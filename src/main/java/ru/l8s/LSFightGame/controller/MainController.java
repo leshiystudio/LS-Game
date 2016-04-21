@@ -36,6 +36,25 @@ public class MainController {
 
         return modelAndView; //после уйдем на представление, указанное чуть выше, если оно будет найдено.
     }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public ModelAndView login() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login");
+        return modelAndView;
+    }
+    @RequestMapping(value = "/profile", method = RequestMethod.GET)
+    public ModelAndView profile() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("profile/index");
+        return modelAndView;
+    }
+    @RequestMapping(value = "/error403", method = RequestMethod.GET)
+    public ModelAndView error403() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("error403");
+        return modelAndView;
+    }
 }
 
 
