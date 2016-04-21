@@ -17,28 +17,8 @@
 <div id="content" class="container">
 <h1>profile</h1>
 <div class="jumbotron">
-    <h1>Привет, юзверь!</h1>
-    <div class="book">
-        <strong>Книга 1</strong>. "<em>Гарри Поттер и философский камень"</em> - 30.06.1997
-    </div>
-    <div class="book">
-        <strong>Книга 2</strong>. "<em>Гарри Поттер и Тайная комната"</em> - 2.07.1998
-    </div>
-    <div class="book">
-        <strong>Книга 3</strong>. "<em>Гарри Поттер и узник Азкабана"</em> - 8.07.1999
-    </div>
-    <div class="book">
-        <strong>Книга 4</strong>. "<em>Гарри Поттер и Кубок огня"</em> - 8.07.2000
-    </div>
-    <div class="book">
-        <strong>Книга 5</strong>. "<em>Гарри Поттер и Орден Феникса"</em> - 21.07.2003
-    </div>
-    <div class="book">
-        <strong>Книга 6</strong>. "<em>Гарри Поттер и Принц-полукровка"</em> - 16.07.2005
-    </div>
-    <div class="book">
-        <strong>Книга 7</strong>. "<em>Гарри Поттер и Дары Смерти"</em> - 21.07.2007
-    </div>
+    <h1>Привет, пользователь!</h1>
+
     <p><a role="button" class="btn btn-primary btn-lg">Узнать больше</a></p>
 </div>
 </div>
