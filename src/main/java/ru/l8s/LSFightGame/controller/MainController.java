@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import ru.l8s.LSFightGame.DB.impl.UserDaoImpl;
 import ru.l8s.LSFightGame.authentication.impl.User;
 
 @Controller
@@ -15,43 +16,40 @@ public class MainController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView main() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("userJSP", new User());
+        modelAndView.addObject("pageInfo", new pageInfo());
         modelAndView.setViewName("index");
         return modelAndView;
     }
 
-    /*как только на index.jsp подтвердится форма
-    <spring:form method="post"  modelAttribute="userJSP" action="check-user">,
-    то попадем вот сюда
-     */
     @RequestMapping(value = "/check-user")
     public ModelAndView checkUser(@ModelAttribute("userJSP") User user) {
         ModelAndView modelAndView = new ModelAndView();
-
-        //имя представления, куда нужно будет перейти
+        //UserDaoImpl userDaoImpl = new UserDaoImpl();
+        //userDaoImpl.insert(new User("QWERTY123","1234"));
         modelAndView.setViewName("secondPage");
-
-        //записываем в атрибут userJSP (используется на странице *.jsp объект user
+        modelAndView.addObject("pageInfo", new pageInfo());
         modelAndView.addObject("userJSP", user);
-
-        return modelAndView; //после уйдем на представление, указанное чуть выше, если оно будет найдено.
+        return modelAndView;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView login() {
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("pageInfo", new pageInfo());
         modelAndView.setViewName("login");
         return modelAndView;
     }
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public ModelAndView profile() {
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("pageInfo", new pageInfo());
         modelAndView.setViewName("profile/index");
         return modelAndView;
     }
     @RequestMapping(value = "/error403", method = RequestMethod.GET)
     public ModelAndView error403() {
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("pageInfo", new pageInfo());
         modelAndView.setViewName("error403");
         return modelAndView;
     }

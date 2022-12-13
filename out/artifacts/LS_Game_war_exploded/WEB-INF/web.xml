@@ -12,7 +12,6 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
     <!-- Обрабатывает все запросы. Центральное понятие-->
     <servlet>
         <servlet-name>dispatcher</servlet-name>

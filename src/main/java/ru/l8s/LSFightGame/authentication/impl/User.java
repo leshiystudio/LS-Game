@@ -21,8 +21,8 @@ public class User implements UserDetails{
     public User() {
     }
 
-    public void setUsername(String name) {
-        this.username = name;
+    public User setUsername(String name) {
+        this.username = name; return this;
     }
 
     @Override
@@ -57,7 +57,8 @@ public class User implements UserDetails{
         return true;
     }
 
-    public void setPassword(String password) {
+    public User setPassword(String password) {
         this.password = password;
+        return this;
     }
 }
