@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import ru.l8s.LSFightGame.DB.impl.UserDaoImpl;
 import ru.l8s.LSFightGame.authentication.impl.User;
+import ru.l8s.LSFightGame.gamecore.impl.Character;
 
 @Controller
 public class MainController {
@@ -24,8 +25,6 @@ public class MainController {
     @RequestMapping(value = "/check-user")
     public ModelAndView checkUser(@ModelAttribute("userJSP") User user) {
         ModelAndView modelAndView = new ModelAndView();
-        //UserDaoImpl userDaoImpl = new UserDaoImpl();
-        //userDaoImpl.insert(new User("QWERTY123","1234"));
         modelAndView.setViewName("secondPage");
         modelAndView.addObject("pageInfo", new pageInfo());
         modelAndView.addObject("userJSP", user);
@@ -33,8 +32,10 @@ public class MainController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView login() {
+    public ModelAndView login(String error) {
         ModelAndView modelAndView = new ModelAndView();
+        if (error != null)
+            modelAndView.addObject("error", "Your username and password is invalid.");
         modelAndView.addObject("pageInfo", new pageInfo());
         modelAndView.setViewName("login");
         return modelAndView;
@@ -43,6 +44,7 @@ public class MainController {
     public ModelAndView profile() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("pageInfo", new pageInfo());
+        modelAndView.addObject("allSkillPoints", Character.allSkillPoints);
         modelAndView.setViewName("profile/index");
         return modelAndView;
     }

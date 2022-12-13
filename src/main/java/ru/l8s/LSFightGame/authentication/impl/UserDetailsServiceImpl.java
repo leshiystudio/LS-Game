@@ -19,21 +19,21 @@ import java.util.Set;
 /**
  * Created by LS on 17.04.2016.
  */
-//@Service
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-    //@Autowired
+    @Autowired
     private UserDaoImpl userService;
 
-    public final void setDataSource(DataSource dataSource) {
-        this.userService.setDataSource(dataSource);
-    }
+    //public final void setDataSource(DataSource dataSource) {
+    //    this.userService.setDataSource(dataSource);
+    //}
 
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        User user = userService.get("cheburashka");
+        User user = userService.get(s);
         Set<GrantedAuthority> roles = new HashSet<>();
-        roles.add(new SimpleGrantedAuthority(UserRoleEnum.USER.name()));
+        roles.add(new SimpleGrantedAuthority(UserRoleEnum.ROLE_USER.name()));
 
         UserDetails userDetails =
                 new org.springframework.security.core.userdetails.User(

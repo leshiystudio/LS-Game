@@ -7,3 +7,92 @@
     color: #777777;
     padding-top: 19px;
 }
+
+.profileBlock{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.input-progress {
+    height: 100%;
+    padding: 0;
+    width: 75%;
+}
+
+.mylabel{
+    margin: 0 !important;
+}
+
+#enemy-viewer {
+    position: relative;
+    min-height: 400px;
+}
+
+#content {
+    overflow: hidden;
+}
+
+.left-label {
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+    width: 90px;
+}
+
+.caption .input-group-addon.progress {
+    padding: 0 !important;
+}
+
+.caption .input-group-addon .progress {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.caption .list-group .progress {
+    border-radius: 0;
+    margin: 0;
+}
+
+.caption .list-group .progress.armor {
+    height: 10px;
+}
+
+.list-group{
+    margin: 0;
+}
+
+.form-characteristics{
+    margin-bottom: 5px;
+}
+
+.warning {
+    background-color: #ffdfff;
+    border-color: #ff0000;
+}
+
+.success {
+    background-color: lightseagreen;
+    border-color: cyan;
+}
+
+.gray {
+    background-color: lightgray;
+    border-color: grey;
+}
+
+.badge-success {
+    background-color: lightseagreen;
+}
+
+.badge-warning {
+    background-color: darkred;
+}
+
+.thumbnail .caption p {
+    color: #333;
+    font-size: 250%;
+    padding: 9px;
+    text-align: center;
+}
