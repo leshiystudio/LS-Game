@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4181941813">
-    <data-source source="LOCAL" name="PostgreSQL - LSgame@localhost" uuid="02952411-b58f-4a92-a0fe-16879bf426fd">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="PostgreSQL - LSgame@lshost" uuid="02952411-b58f-4a92-a0fe-16879bf426fd">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/LSgame</jdbc-url>
+      <jdbc-url>jdbc:postgresql://lshost:15432/LSGame</jdbc-url>
     </data-source>
   </component>
 </project>
