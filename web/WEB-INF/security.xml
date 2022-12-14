@@ -31,14 +31,16 @@ http://www.springframework.org/schema/security/spring-security-3.2.xsd">
     </beans:bean>
 -->
     <authentication-manager>
-
-<!--        <authentication-provider >
+<!--
+// Для авторизации без БД
+        <authentication-provider >
             <user-service>
                 <user name="admin" password="pass" authorities="ROLE_ADMIN, ROLE_USER" />
                 <user name="user1" password="1111" authorities="ROLE_USER" />
                 <user name="user2" password="2222" disabled="true" authorities="ROLE_USER" />
             </user-service>
-        </authentication-provider> -->
+        </authentication-provider>
+-->
         <authentication-provider>
             <jdbc-user-service data-source-ref="dataSource"
                                users-by-username-query="select username, password, enabled
@@ -48,7 +50,7 @@ http://www.springframework.org/schema/security/spring-security-3.2.xsd">
       	                                                 left join authorities au on u.id = au.user_id
        	                                                where u.username = ?" />
         </authentication-provider>
-<!--        <authentication-provider user-service-ref='userDetailsServiceImpl'/> -->
+<!--    <authentication-provider user-service-ref='userDetailsServiceImpl'/> -->
     </authentication-manager>
     <beans:bean id="userService" class="ru.l8s.LSFightGame.DB.impl.UserDaoImpl">
         <beans:property name="dataSource" ref="dataSource"/>
